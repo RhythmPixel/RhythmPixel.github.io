@@ -1,0 +1,25 @@
+body {
+	background-color: black;
+	color: lightgray;
+	-webkit-user-select: none; /* Only works for Chrome apparently, change later */
+}
+
+div.button {
+	border: 1px solid lightgray;
+	padding: 2px;
+	width: 80px;
+}
+
+div.row {
+	display: table;
+}
+
+div.minecell {
+	display: table-cell;
+	border: 1px solid white;
+	padding: 1px;
+	width: 25px;
+	height: 25px;
+	text-align: center;
+	vertical-align: middle;
+}

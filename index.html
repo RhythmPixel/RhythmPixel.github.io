@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="interface.css" />
+<title>Page title</title>
+</head>
+
+<body>
+
+<!-- <canvas id="c1" width="480", height="320">
+Your browser doesn't support canvas!
+</canvas> -->
+
+<!-- <script type="text/javascript">
+    element = document.getElementById("c1");
+    c = element.getContext("2d");
+    c.fillStyle = "#aaaaaa";
+    c.fillRect(0, 0, 150, 100); // background gray
+    c.strokeRect(20, 10, 80, 60); // black rectangle
+</script> -->
+
+Number: <span id="cookies">0</span>
+<br />
+Cursors: <span id="cursors">0</span>
+<br />
+Cost: <span id="cursorCost">10</span>
+<br />
+Miners: <span id="miner">0</span>
+<br />
+<div class="button" onMouseDown="cookieClick(1)">Click me!</div>
+<br />
+<div class="button" onClick="AddMiner()">Add Miner</div>
+<br />
+<div class="button" onClick="ToggleMiner()">Toggle Miner</div>
+<br />
+<div class="button" onClick="SetupMineArea()">Mine</div>
+<br />
+
+<!-- Mining area -->
+<div class="row">
+<div>
+	<div class="minecell" id="x1y1" onClick="BreakCell(this.id, 0, 1)"></div>
+	<div class="minecell" id="x1y2" onClick="BreakCell(this.id, 1, 1)"></div>
+	<div class="minecell" id="x1y3" onClick="BreakCell(this.id, 2, 1)"></div>
+	<div class="minecell" id="x1y4" onClick="BreakCell(this.id, 3, 1)"></div>
+	<div class="minecell" id="x1y5" onClick="BreakCell(this.id, 4, 1)"></div>
+</div>
+<div>
+	<div class="minecell" id="x2y1" onClick="BreakCell(this.id, 5, 1)"></div>
+	<div class="minecell" id="x2y2" onClick="BreakCell(this.id, 6, 1)"></div>
+	<div class="minecell" id="x2y3" onClick="BreakCell(this.id, 7, 1)"></div>
+	<div class="minecell" id="x2y4" onClick="BreakCell(this.id, 8, 1)"></div>
+	<div class="minecell" id="x2y5" onClick="BreakCell(this.id, 9, 1)"></div>
+</div>
+<div>
+	<div class="minecell" id="x3y1" onClick="BreakCell(this.id, 10, 1)"></div>
+	<div class="minecell" id="x3y2" onClick="BreakCell(this.id, 11, 1)"></div>
+	<div class="minecell" id="x3y3" onClick="BreakCell(this.id, 12, 1)"></div>
+	<div class="minecell" id="x3y4" onClick="BreakCell(this.id, 13, 1)"></div>
+	<div class="minecell" id="x3y5" onClick="BreakCell(this.id, 14, 1)"></div>
+</div>
+<div>
+	<div class="minecell" id="x4y1" onClick="BreakCell(this.id, 15, 1)"></div>
+	<div class="minecell" id="x4y2" onClick="BreakCell(this.id, 16, 1)"></div>
+	<div class="minecell" id="x4y3" onClick="BreakCell(this.id, 17, 1)"></div>
+	<div class="minecell" id="x4y4" onClick="BreakCell(this.id, 18, 1)"></div>
+	<div class="minecell" id="x4y5" onClick="BreakCell(this.id, 19, 1)"></div>
+</div>
+<div>
+	<div class="minecell" id="x5y1" onClick="BreakCell(this.id, 20, 1)"></div>
+	<div class="minecell" id="x5y2" onClick="BreakCell(this.id, 21, 1)"></div>
+	<div class="minecell" id="x5y3" onClick="BreakCell(this.id, 22, 1)"></div>
+	<div class="minecell" id="x5y4" onClick="BreakCell(this.id, 23, 1)"></div>
+	<div class="minecell" id="x5y5" onClick="BreakCell(this.id, 24, 1)"></div>
+</div>
+</div>
+
+<script type="text/javascript" src="main.js"></script>
+<script type="text/javascript" src="mine.js"></script>
+</body>
+</html>
