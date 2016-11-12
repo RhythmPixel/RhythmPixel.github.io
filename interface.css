@@ -4,6 +4,10 @@ body {
 	-webkit-user-select: none; /* Only works for Chrome apparently, change later */
 }
 
+#ponyIcon {
+	visibility: hidden;
+}
+
 div.button {
 	border: 1px solid lightgray;
 	padding: 2px;

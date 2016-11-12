@@ -1,4 +1,4 @@
-var cookies = 0;
+/* var cookies = 0;
 var cursors = 0;
 var counter = 0;
 
@@ -19,7 +19,7 @@ function buyCursor() {
 	};
 	var nextCost = Math.floor(10 * Math.pow(1.1, cursors));		//next cost of cursor (same if false)
 	document.getElementById("cursorCost").innerHTML = nextCost;	//update cursorCost text
-};
+}; */
 
 //Game loop
 /* window.setInterval(function(){

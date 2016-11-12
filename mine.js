@@ -11,7 +11,7 @@ var mineArea = [1,  2,  3,  4,  5,
 				16, 17, 18, 19, 20,
 				21, 22, 23, 24, 25];
 				
-var miner = 0; //test workers, soon to be ponies with stats, you know?
+var miner = 0; //***test workers, should be an array for ponies
 var mineTimerID = 0; //stores mineTimer id to clear later
 var minerToggle = 0; //toggle miners on or off
 
@@ -25,7 +25,7 @@ function ChooseOre(cell) {
 	if (randNumber >= 99)
 		mineArea[cell].ore = 10; //arcanite
 	else if (randNumber > 90)
-		mineArea[cell].ore = 9; //diamond
+		mineArea[cell].ore = 9; //crystal
 	else if (randNumber > 80)
 		mineArea[cell].ore = 8; //gems
 	else if (randNumber > 70)
@@ -64,7 +64,7 @@ function BackgroundColor(id, ore) {
 		document.getElementById(id).style.backgroundColor = "cyan";
 	else if (ore == 8)  //gems
 		document.getElementById(id).style.backgroundColor = "red";	
-	else if (ore == 9)  //diamond
+	else if (ore == 9)  //crystal
 		document.getElementById(id).style.backgroundColor = "blue";	
 	else if (ore == 10) //arcanite
 		document.getElementById(id).style.backgroundColor = "purple";
