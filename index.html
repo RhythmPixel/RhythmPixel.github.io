@@ -9,74 +9,9 @@
 
 <img id = "ponyIcon" width="0" height="0" src="./Art/Pony RGB.png">
 
-<canvas id="c1" width="100" height="100">
-Random Canvas
+<canvas id="c1" width="64" height="64">
+Random Canvas 
 </canvas>
-
-<script type="text/javascript">
-    function setPixel(imageData, x, y, r, g, b, a) {
-		index = (x + y * imageData.width) * 4;
-		imageData.data[index+0] = r;
-		imageData.data[index+1] = g;
-		imageData.data[index+2] = b;
-		imageData.data[index+3] = a;
-	}
-	
-	element = document.getElementById("c1");
-    c = element.getContext("2d");
-	
-	//Get the image
-	imgTest = document.getElementById("ponyIcon");
-	imgTest.crossOrigin = "Anonymous";
-	
-	//Draw the image on the canvas (img, x, y)
-	c.drawImage(imgTest, 0, 0);
-	
-	//read width and height of canvas
-	width = element.width;
-	height = element.height;
-	
-	//Get image data
-	imageData1 = c.getImageData(0, 0, width, height); //tainted?
-	
-	//Replaces color values
-	for (y = 0; y < height; y++)
-	{
-		pos = y * width * 4; //4 for 4 ints per pixel
-		for (x = 0; x < width; x++)
-		{
-			r = imageData1.data[pos++];
-            g = imageData1.data[pos++];
-            b = imageData1.data[pos++];
-            a = imageData1.data[pos++];
-			if (r > 5)
-				setPixel(imageData1, x, y, 0, 255, 0, a);
-			else if (g > 5)
-				setPixel(imageData1, x, y, 0, 0, 255, a);
-			else if (b > 5)
-				setPixel(imageData1, x, y, 255, 0, 0, a);
-		}
-	}
-	
-	//Put imageData back on canvas?
-	c.putImageData(imageData1, 0, 0);
-	
-	//create a new batch of pixels with same dimensions
-	//imageData = c.createImageData(width, height);
-	
-	<!-- // draw random dots -->
-	<!-- for (i = 0; i < 10000; i++) { -->
-		<!-- x = Math.random() * width | 0; // |0 to truncate to Int32 -->
-		<!-- y = Math.random() * height | 0; -->
-		<!-- r = Math.random() * 256 | 0; -->
-		<!-- g = Math.random() * 256 | 0; -->
-		<!-- b = Math.random() * 256 | 0; -->
-		<!-- setPixel(imageData, x, y, r, g, b, 255); // 255 opaque -->
-	<!-- } -->
-
-	<!-- // copy the image data back onto the canvas -->
-	<!-- c.putImageData(imageData, 0, 0); // at coords 0,0 -->
-</script>
 
 <br />
 Placeholder: <span id="cookies">0</span>
@@ -87,7 +22,9 @@ Placeholder: <span id="cursorCost">0</span>
 <br />
 Miners: <span id="miner">0</span>
 <br />
-<div class="button">Placeholder</div>
+<div class="button" onClick="loadPonyIcon()">Load Icon</div>
+<br />
+<div class="button" onClick="randomPonyIcon()">Random Icon</div>
 <br />
 <div class="button" onClick="AddMiner()">Add Miner</div>
 <br />
@@ -135,7 +72,7 @@ Miners: <span id="miner">0</span>
 </div>
 </div>
 
-<script type="text/javascript" src="main.js"></script>
 <script type="text/javascript" src="mine.js"></script>
+<script type="text/javascript" src="canvasFunctions.js"></script>
 </body>
 </html>
