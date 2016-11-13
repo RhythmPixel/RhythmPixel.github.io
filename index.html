@@ -2,7 +2,7 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="interface.css" />
-<title>Page title</title>
+<title>Experiments for now...</title>
 </head>
 
 <body>
@@ -10,27 +10,37 @@
 <img id = "ponyIcon" width="0" height="0" src="./Art/Pony RGB.png">
 
 <canvas id="c1" width="64" height="64">
-Random Canvas 
+Not running a browser with canvas support?
 </canvas>
 
 <br />
-Placeholder: <span id="cookies">0</span>
+These are just some experiments, try breaking something
 <br />
-Placeholder: <span id="cursors">0</span>
+Although I don't think you can
 <br />
-Placeholder: <span id="cursorCost">0</span>
+Also this page layout is very basic
+<br />
+<br />
+Load Icon gives a random colored icon each time
+<br />
+Add Miner increases workers on mine area
+<br />
+ToggleMiner turns on/off workers
+<br />
+Mine starts/resets the mine area
+<br />
+You can click the cells
+<br /> 
 <br />
 Miners: <span id="miner">0</span>
 <br />
-<div class="button" onClick="loadPonyIcon()">Load Icon</div>
-<br />
-<div class="button" onClick="randomPonyIcon()">Random Icon</div>
+<div class="button" onClick="randomPonyIcon()">Load Icon</div>
 <br />
 <div class="button" onClick="AddMiner()">Add Miner</div>
 <br />
 <div class="button" onClick="ToggleMiner()">Toggle Miner</div>
 <br />
-<div class="button" onClick="SetupMineArea()">Mine</div>
+<div class="button" onClick="SetupMineArea()">Reset Mine</div>
 <br />
 
 <!-- Mining area -->
@@ -71,6 +81,8 @@ Miners: <span id="miner">0</span>
 	<div class="minecell" id="x5y5" onClick="BreakCell(this.id, 24, 1)"></div>
 </div>
 </div>
+
+<div id="rainbow" onClick="Rainbow()">Rainbow?</div>
 
 <script type="text/javascript" src="mine.js"></script>
 <script type="text/javascript" src="canvasFunctions.js"></script>

@@ -8,10 +8,18 @@ body {
 	visibility: hidden;
 }
 
+#rainbow {
+	position: absolute;
+	right: 10px;
+	border: 1px solid lightgray;
+	padding: 2px;
+	width: 90px;
+}
+
 div.button {
 	border: 1px solid lightgray;
 	padding: 2px;
-	width: 80px;
+	width: 90px;
 }
 
 div.row {

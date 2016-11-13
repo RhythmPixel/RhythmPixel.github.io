@@ -87,3 +87,22 @@ function randomPonyIcon() {
 	//Output new ponyIcon
 	canvasObj.putImageData(imageData, 0, 0);
 }
+
+var rainbowTimerID = 0;
+var rainbowToggle = 0;
+
+//Silly thing
+function Rainbow() {
+	if (rainbowToggle == 0)
+	{
+		rainbowTimerID = setInterval(randomPonyIcon, 50);
+		rainbowToggle = 1;
+		document.getElementById("rainbow").innerHTML = "Turn it off!";
+	}
+	else
+	{
+		clearInterval(rainbowTimerID);
+		rainbowToggle = 0;
+		document.getElementById("rainbow").innerHTML = "Again...?";
+	}
+}

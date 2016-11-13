@@ -147,3 +147,7 @@ function MinerWork() {
 		BreakCell(mineID, mineCell, 1);
 	}
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+  SetupMineArea();
+});
