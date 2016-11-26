@@ -110,8 +110,9 @@ function BreakCell(id, cell, power) {
 	
 	if (mineArea[cell].mine <= 0)
 	{
-		document.getElementById(id).innerHTML = mineArea[cell].ore;
+		document.getElementById(id).innerHTML = "";
 		BackgroundColor(id, mineArea[cell].ore);
+		increaseProgressBar(mineArea[cell].ore);
 	}
 	
 	else

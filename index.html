@@ -25,7 +25,7 @@ Load Icon gives a random colored icon each time
 <br />
 Add Miner increases workers on mine area
 <br />
-ToggleMiner turns on/off workers
+Toggle Miner turns on/off workers
 <br />
 Mine starts/resets the mine area
 <br />
@@ -81,10 +81,32 @@ Miners: <span id="miner">0</span>
 	<div class="minecell" id="x5y5" onClick="BreakCell(this.id, 24, 1)"></div>
 </div>
 </div>
+<br />
 
-<div id="rainbow" onClick="Rainbow()">Rainbow?</div>
+<div id="progressBar">
+	<div id="barInside"></div>
+</div>
+<div id="levelCell">
+	<div id="level">0</div>
+</div>
+
+<br />
+
+<div id="rhythmBar">
+	<div id="rhythmInside"></div>
+</div>
+
+<button id="startRhythm" onClick="moveRhythmTest()">Start</button>
+<button id="stopRhythm" onClick="stopRhythm()">Stop</button>
+<br />
+<br />
+<button onClick="pressRhythmTest()">Click</button>
+
+<!-- <div id="rainbow" onClick="Rainbow()">Rainbow?</div> -->
 
 <script type="text/javascript" src="mine.js"></script>
 <script type="text/javascript" src="canvasFunctions.js"></script>
+<script type="text/javascript" src="progress.js"></script>
+<script type="text/javascript" src="rhythm.js"></script>
 </body>
 </html>

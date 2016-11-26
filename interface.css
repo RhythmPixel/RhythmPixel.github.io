@@ -16,6 +16,55 @@ body {
 	width: 90px;
 }
 
+#rhythmBar {
+	position: relative;
+	width: 100px;
+	height: 10px;
+	border: 1px solid white;
+	background-color: white;
+	margin-right: 5px;
+	margin-bottom: 10px;
+}
+
+#rhythmInside {
+	position: absolute;
+	width: 0px;
+	height: 10px;
+	background-color: green;
+}
+
+#progressBar {
+	position: relative;
+	width: 100px;
+	height: 10px;
+	border: 1px solid white;
+	background-color: white;
+	margin-right: 5px;
+	margin-bottom: 15px;
+	float: left;
+}
+
+#barInside {
+	position: absolute;
+	width: 0px;
+	height: 10px;
+	background-color: green;
+}
+
+#levelCell {
+	width: 12px;
+	height: 12px;
+	/*border: 1px solid white;*/
+	margin-left: 5px;
+	float: left;
+}
+
+#level {
+	/*text-align: center;*/
+	line-height: 12px;
+	font-size: 10px;
+}
+
 div.button {
 	border: 1px solid lightgray;
 	padding: 2px;
